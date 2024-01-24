@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "d2b1fcc6-cd1c-4a7f-af71-c5d68403240d",
+		"name": "Teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32405507"
+	},
+	"item": [
+		{
+			"name": "Colaboradores",
+			"item": [
+				{
+					"name": "Listar colaboradores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Host}}/api/Colaboradores",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Colaboradores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar colaborador",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"ColabPostman\",\r\n  \"unidade_IdFK\": 5,\r\n  \"usuario_IdFK\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Colaboradores",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Colaboradores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar colaborador",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"string\",\r\n  \"unidade_IdFK\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Colaboradores/6",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Colaboradores",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir colaborador",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Host}}/api/Colaboradores/6",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Colaboradores",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unidades",
+			"item": [
+				{
+					"name": "Listar unidades",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Host}}/api/Unidades",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Unidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar unidade",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"UnidPostman\",\r\n  \"cod\": 55,\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Unidades",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Unidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vincular colaborador",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_Colaborador\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Unidades/6",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Unidades",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Unidades/6",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Unidades",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Listar usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Host}}/api/Usuarios",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar usuarios por status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Host}}/api/Usuarios/false",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Usuarios",
+								"false"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"login\": \"UserTeste\",\r\n  \"senha\": \"1234\",\r\n  \"status\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Usuarios",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"senha\": \"string\",\r\n  \"status\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/api/Usuarios/6",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"api",
+								"Usuarios",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "localhost:5027",
+			"type": "string"
+		}
+	]
+}
